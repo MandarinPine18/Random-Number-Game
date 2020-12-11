@@ -1,0 +1,15 @@
+You are to create a guessing game static method in which the following happens.
+
+  1.  Have the program welcome them to the game by name.
+  2.  Have the program explain the rules.
+  3.  Have the program ask the user what is the max number they want the range to be between.  For example, if I say 400, the game will then have a range of 1 - 400 to pick a random number from.
+  4.  Have the program randomly generate the number.
+  5.  Use a loop that will allow the user 5 attempts to guess the correct number.  BONUS: Create an if/else/ statement that will allow more guesses the higher the range.  (i.e. 5 for 1-100, 7 for 1-200 etc.)
+  6.  Each time a guess is made, the program should reply with one of the following three responses:
+    A. That guess was too high
+    B. That guess was too Low
+    C. Congrats you correctly guessed the number in ____ guesses.
+  7.  If they run out of attempts. Tell them what the number was.
+  
+
+  BONUS - Create code that when the game is over, the player has the ability to play the game again.
