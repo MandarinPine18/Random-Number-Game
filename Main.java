@@ -32,4 +32,8 @@ class Main {
         return new int[]{1, 10};
     }
 
+    public static String input(String prompt) {
+        System.out.print(prompt);
+        return input.nextLine();
+    }
 }
