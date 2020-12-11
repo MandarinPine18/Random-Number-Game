@@ -26,4 +26,13 @@ class Main
   }
 
   //Create your Static game method here.
+  public static RandomNumberGame startGame() {
+    int[] range = promptRange();
+    return new RandomNumberGame(range);
+  }
+
+  public static int[] promptRange() {
+    return new int[]{1, 10};
+  }
+
 }

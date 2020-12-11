@@ -3,8 +3,9 @@ public class RandomNumberGame {
     private int max = Integer.MAX_VALUE;
     private static boolean cheats = false; // change this to true if you want to enter cheat mode
 
-    public void promptRange() {
-
+    public RandomNumberGame(int[] range) {
+        setMin(range[1]);
+        setMax(range[2]);
     }
 
     private void setMin(int min) {
