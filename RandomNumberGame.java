@@ -4,8 +4,8 @@ public class RandomNumberGame {
     private static boolean cheats = false; // change this to true if you want to enter cheat mode
 
     public RandomNumberGame(int[] range) {
-        setMin(range[1]);
-        setMax(range[2]);
+        setMin(range[0]);
+        setMax(range[1]);
     }
 
     private void setMin(int min) {
