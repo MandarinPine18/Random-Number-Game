@@ -2,7 +2,7 @@ public class RandomNumberGame {
 	private int min = Integer.MIN_VALUE;
 	private int max = Integer.MAX_VALUE;
 	private int number;
-	private static boolean cheats = false; // change this to true if you want to enter cheat mode
+	private static final boolean cheats = false; // change this to true if you want to enter cheat/debug/evaluation mode
 
 	public RandomNumberGame(int[] range) {
 		setMin(range[0]);
@@ -11,6 +11,7 @@ public class RandomNumberGame {
 		if (cheats) {
 			System.out.println("CHEATS ENABLED - " + number + " generated from range [" + min + ", " + max + "]");
 		}
+		//System.out.println(number);	// uncomment the first part of this line for evaluation - this is a much more primitive way to get the generated number for evaluation
 	}
 
 	private void generateNumber() {
