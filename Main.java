@@ -18,6 +18,7 @@ class Main {
         //Welcome your user and ask for their name.
         String name = input("Enter your name: ");
         System.out.println("Welcome to the game, " + name);
+        System.out.println(RandomNumberGame.getRules() + "\n");
 
         RandomNumberGame game = startGame();
 
