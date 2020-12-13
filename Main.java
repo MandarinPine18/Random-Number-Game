@@ -21,7 +21,9 @@ class Main {
 
         RandomNumberGame game = startGame();
 
-        int guessLimit = 5;
+        int guessLimit = game.recommendedGuesses();
+        System.out.println("You have " + guessLimit + "guesses.");
+
         for (int i = 0; i < guessLimit; i++) {
             int guess = Integer.parseInt(input("Enter guess " + (i+1) + ": "));
             GuessResult result = game.processGuess(guess);
