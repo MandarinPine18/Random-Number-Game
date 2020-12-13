@@ -26,6 +26,9 @@ class Main {
             int guess = Integer.parseInt(input("Enter guess " + (i+1) + ": "));
             GuessResult result = game.processGuess(guess);
             System.out.println(guessToString(result, i) + "\n");
+            if (result == GuessResult.CORRECT) {
+                break;
+            }
         }
 
         //Code a way to replay the game.
