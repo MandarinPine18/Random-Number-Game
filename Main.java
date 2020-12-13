@@ -23,7 +23,9 @@ class Main {
 
         int guessLimit = 5;
         for (int i = 0; i < guessLimit; i++) {
-            makeGuess();
+            int guess = Integer.parseInt(input("Enter guess " + (i+1) + ": "));
+            GuessResult result = game.processGuess(guess);
+            System.out.println(guessToString(result, i) + "\n");
         }
 
         //Code a way to replay the game.
@@ -44,5 +46,15 @@ class Main {
     public static String input(String prompt) {
         System.out.print(prompt);
         return input.nextLine();
+    }
+
+    public static String guessToString(GuessResult result, int i) {
+        String resultString = "Error in guess to string";
+        switch (result) {
+            case LOW -> resultString = "That guess was too low";
+            case HIGH -> resultString = "That guess was too high";
+            case CORRECT -> resultString = "Congrats you correctly guessed the number in " + (i+1) + " guesses.";
+        }
+        return resultString;
     }
 }
