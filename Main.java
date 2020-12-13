@@ -42,7 +42,10 @@ class Main {
     }
 
     public static int[] promptRange() {
-        return new int[]{1, 10};
+        int[] range = new int[2];
+        range[0] = 1;
+        range[1] = Integer.parseInt(input("Enter the maximum possible number: "));
+        return range;
     }
 
     // cleans up repetitive print and get input statements
