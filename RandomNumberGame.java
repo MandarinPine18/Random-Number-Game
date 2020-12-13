@@ -1,11 +1,20 @@
 public class RandomNumberGame {
 	private int min = Integer.MIN_VALUE;
 	private int max = Integer.MAX_VALUE;
+	private int number;
 	private static boolean cheats = false; // change this to true if you want to enter cheat mode
 
 	public RandomNumberGame(int[] range) {
 		setMin(range[0]);
 		setMax(range[1]);
+		generateNumber();
+		if (cheats) {
+			System.out.println("CHEATS ENABLED - " + number + " generated from range [" + min + ", " + max + "]");
+		}
+	}
+
+	private void generateNumber() {
+		number = (int)(Math.random() * (max-min+1) + min);
 	}
 
 	private void setMin(int min) {
@@ -22,5 +31,15 @@ public class RandomNumberGame {
 
 	public static String getRules() {
 		return "This is the Random Number Guessing Game. A random number will be generated based on a range you provide. You must then guess the number. You have a limited number of guesses. Try your best and have fun!";
+	}
+
+	public GuessResult processGuess(int guess) {
+		if (guess < number) {
+			return GuessResult.LOW;
+		} else if (guess > number) {
+			return GuessResult.HIGH;
+		} else {
+			return GuessResult.CORRECT;
+		}
 	}
 }
