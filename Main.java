@@ -16,7 +16,15 @@ class Main {
 
 
         //Welcome your user and ask for their name.
+        String name = input("Enter your name: ");
+        System.out.println("Welcome to the game, " + name);
 
+        RandomNumberGame game = startGame();
+
+        int guessLimit = 5;
+        for (int i = 0; i < guessLimit; i++) {
+            makeGuess();
+        }
 
         //Code a way to replay the game.
 
@@ -32,6 +40,7 @@ class Main {
         return new int[]{1, 10};
     }
 
+    // cleans up repetitive print and get input statements
     public static String input(String prompt) {
         System.out.print(prompt);
         return input.nextLine();
