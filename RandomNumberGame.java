@@ -43,4 +43,21 @@ public class RandomNumberGame {
 			return GuessResult.CORRECT;
 		}
 	}
+
+	public int recommendedGuesses() {
+		int range = max - min;
+		int recommendation;
+		if (range > 500) {
+			recommendation = 60;
+		} else if (range > 250) {
+			recommendation = 40;
+		} else if (range > 100) {
+			recommendation = 20;
+		} else if (range > 10) {
+			recommendation = 10;
+		} else {
+			recommendation = range / 2;
+		}
+		return recommendation;
+	}
 }
