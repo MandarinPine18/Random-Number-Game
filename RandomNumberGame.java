@@ -1,5 +1,5 @@
 public class RandomNumberGame {
-	private int min = Integer.MIN_VALUE;
+	private int min = 0;
 	private int max = Integer.MAX_VALUE;
 	private int number;
 	private static final boolean cheats = false; // change this to true if you want to enter cheat/debug/evaluation mode
