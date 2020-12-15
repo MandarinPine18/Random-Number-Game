@@ -45,7 +45,7 @@ public class RandomNumberGame {
 	}
 
 	public int recommendedGuesses() {
-		int range = max - min;
+		int range = max - min + 1;
 		int recommendation;
 		if (range > 500) {
 			recommendation = 60;
