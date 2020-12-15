@@ -56,7 +56,7 @@ public class RandomNumberGame {
 		} else if (range > 10) {
 			recommendation = 10;
 		} else {
-			recommendation = range / 2;
+			recommendation = 5;
 		}
 		return recommendation;
 	}
