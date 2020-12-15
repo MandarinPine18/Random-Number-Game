@@ -31,7 +31,7 @@ public class RandomNumberGame {
 	}
 
 	public static String getRules() {
-		return "This is the Random Number Guessing Game. A random number will be generated based on a range you provide. You must then guess the number. You have a limited number of guesses. Try your best and have fun!";
+		return "This is the Random Number Guessing Game. A random number will be generated between a minimum of 1 and a maximum you provide. You must then guess the number. You have a limited number of guesses. Try your best and have fun!";
 	}
 
 	public GuessResult processGuess(int guess) {
