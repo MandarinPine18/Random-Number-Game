@@ -60,4 +60,8 @@ public class RandomNumberGame {
 		}
 		return recommendation;
 	}
+
+	public void loseMessage() {
+		System.out.println("You ran out of guesses! The correct answer was " + number + ".");
+	}
 }

@@ -46,6 +46,10 @@ class Main {
                 if (result == GuessResult.CORRECT) {
                     break;
                 }
+                if (i == guessLimit) {
+                    game.loseMessage();
+                    System.out.println();
+                }
             }
 
             //Code a way to replay the game.
