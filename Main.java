@@ -1,7 +1,7 @@
-/*Student name
- **Date
- **Period
- **Program name
+/* Ethan Parab
+ **12/14/20
+ **Period 5
+ **AP Computer Science A
  */
 
 //imports
