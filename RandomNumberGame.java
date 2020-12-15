@@ -2,7 +2,7 @@ public class RandomNumberGame {
 	private int min = 0;
 	private int max = Integer.MAX_VALUE;
 	private int number;
-	private static final boolean cheats = false; // change this to true if you want to enter cheat/debug/evaluation mode
+	private static final boolean cheats = true; // change this to true if you want to enter cheat/debug/evaluation mode
 
 	public RandomNumberGame(int[] range) {
 		setMin(range[0]);
@@ -59,5 +59,9 @@ public class RandomNumberGame {
 			recommendation = range / 2;
 		}
 		return recommendation;
+	}
+
+	public void loseMessage() {
+		System.out.println("You ran out of guesses! The correct answer was " + number + ".");
 	}
 }
