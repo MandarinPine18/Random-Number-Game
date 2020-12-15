@@ -52,11 +52,12 @@ class Main {
             while (true) { try {
                 Command command = stringToCommand(input("Type \"end\" to exit the program or \"replay\" to restart the game.\n>"));
                 switch (command) {
-                    case ERROR -> throw new IllegalArgumentException("Invalid command, try again.");
-                    case EXIT -> {
+                    case ERROR:
+                        throw new IllegalArgumentException("Invalid command, try again.");
+                    case EXIT:
                         System.out.println("Exiting...");
                         System.exit(0);
-                    }
+                        break;
                 }
                 break;
             } catch (IllegalArgumentException e) {
@@ -96,9 +97,15 @@ class Main {
     public static String guessToString(GuessResult result, int i) {
         String resultString = "Error in guess to string";
         switch (result) {
-            case LOW -> resultString = "That guess was too low";
-            case HIGH -> resultString = "That guess was too high";
-            case CORRECT -> resultString = "Congrats you correctly guessed the number in " + i + " guesses.";
+            case LOW:
+                resultString = "That guess was too low";
+                break;
+            case HIGH:
+                resultString = "That guess was too high";
+                break;
+            case CORRECT:
+                resultString = "Congrats you correctly guessed the number in " + i + " guesses.";
+                break;
         }
         return resultString;
     }
